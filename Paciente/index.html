@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Médico</title>
+</head>
+
+<body>
+
+    <ul class="nav nav-tabs navbar-light">  
+        <li class="nav-item">
+            <a class="nav-link  text-center" target="contenido" onclick="getContenido('index.php')" href="index.php"
+                style="color:black">Pacientes</a>
+        </li>      
+        <li class="nav-item">
+            <a class="nav-link  text-center disabled" target="contenido" onclick="getContenido('index.php')" href="Consultas/index.php"
+                style="color:black">Consultas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link  text-center disabled" target="contenido" onclick="getContenido('index.php')" href="Receta/index.php"
+                style="color:black">Recetas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link  text-center disabled" target="contenido" onclick="getContenido('index.php')" href="Especialidades/index.php"
+                style="color:black">Especialidades</a>
+        </li>
+        <li class="nav-item text-center">
+            <a class="nav-link text-center disabled" target="contenido" onclick="getContenido('index.php')" href="Medicamentos/index.php"
+                style="color:black">Medicamentos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link  text-center disabled" target="contenido" onclick="getContenido('index.php')" href="Roles/index.php"
+                style="color:black">Roles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link  text-center disabled" target="contenido" onclick="getContenido('indexRol.php')" href="Usuarios/index.php"
+                style="color:black">Usuarios</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link  text-center disabled" target="contenido" onclick="getContenido('indexRolP.php')" href="Medicos/index.php"
+                style="color:black">Médicos</a>
+        </li>        
+        <li class="nav-item text-center">
+            <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+            <a class="nav-link text-center" href="../login/LoginPacientes/cerrar.php" style="color:black">Cerrar Sesión</a>
+        </li>
+    </ul>
+
+    <section>
+        <iframe name="contenido" id="contenido" src="Paciente/index.php" frameborder="0" width="100%" height="700px"></iframe>
+    </section>
+
+    <script>
+        function getContenido(cuadro) {
+            document.getElementById("contenido").src = cuadro;
+        }
+    </script>
+    <!-- Agregar aquí el script de Bootstrap y cualquier otro script necesario -->
+
+</body>
+
+</html>
